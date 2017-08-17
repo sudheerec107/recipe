@@ -1,0 +1,45 @@
+  <img [src]="recipe.imgSrc" />
+  <ion-card-content>
+    <ion-card-title (click)="toggleDescripton();">
+       <ion-list>
+      <button ion-item>
+        <ion-icon [name]="isDescriptionShown ? 'arrow-dropdown' : 'arrow-dropright'" item-right></ion-icon>
+          {{recipe.heading}}
+      </button>
+       </ion-list>
+    </ion-card-title>
+    <p *ngIf="isDescriptionShown">
+      {{recipe.description}}
+    </p>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="bonfire"></ion-icon>
+        <div>{{recipe.triedit}} Tried this</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{recipe.likes}} Likes</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-down"></ion-icon>
+        <div>{{recipe.dislike}} Dislikes</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="share" md="md-share"></ion-icon>
+        <div>Share</div>
+      </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>

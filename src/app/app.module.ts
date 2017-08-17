@@ -1,3 +1,5 @@
+import { NewRecipe } from './../pages/new-recipe/new-recipe';
+import { RecipeCard } from './../components/recipe-card/recipe-card';
 import { Test } from './test';
 import { Dashboard } from './../pages/dashboard/dashboard';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -16,6 +18,8 @@ import { SettingService } from '../service/settings.service';
     MyApp,
     TabsPage,
     Dashboard,
+    RecipeCard,
+    NewRecipe,
     Test
   ],
   imports: [
@@ -26,7 +30,8 @@ import { SettingService } from '../service/settings.service';
   entryComponents: [
     MyApp,
     TabsPage,
-    Dashboard
+    Dashboard,
+    NewRecipe
   ],
   providers: [
     StatusBar,

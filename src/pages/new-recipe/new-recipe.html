@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add recipe</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label floating>Name of Recipe</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Ingradient required</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Vegitarian</ion-label>
+    <ion-toggle [(ngModel)]="isVeg"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Description</ion-label>
+    <ion-textarea  name="description"></ion-textarea>
+  </ion-item>
+  <ion-item text-center>
+    <button ion-button outline>Submit</button>
+  </ion-item>
+</ion-list>
+</ion-content>
